@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    app:cardBackgroundColor="#FFF"
+    app:cardCornerRadius="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:background="#FFF">
+
+
+        <ImageView
+            android:id="@+id/imageClothes"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/textNameClothes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="200dp"
+            android:text="TextView"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textDescClothes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="230dp"
+            android:text="TextView"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/textPriceClothes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="280dp"
+            android:text="TextView"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageLike"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="200dp"
+            app:srcCompat="@drawable/heart_unlike" />
+
+    </RelativeLayout>
+</RelativeLayout>
