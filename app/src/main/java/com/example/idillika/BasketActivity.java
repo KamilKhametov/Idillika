@@ -22,13 +22,6 @@ import java.util.List;
 
 public class BasketActivity extends AppCompatActivity {
 
-    RecyclerView recyclerViewBasket;
-    RecyclerView.LayoutManager layoutManager = new LinearLayoutManager ( this );
-    AdapterBasket adapterBasket;
-    List<ModelForBasket> list = new ArrayList<> (  );
-
-
-
     @Override
     protected void onCreate( Bundle savedInstanceState ) {
         super.onCreate ( savedInstanceState );
@@ -36,16 +29,7 @@ public class BasketActivity extends AppCompatActivity {
 
         // Закрепление actionBar
         actionBarAttach ();
-
-       recyclerViewBasket = findViewById ( R.id.recyclerViewBasket );
-
-
-        adapterBasket = new AdapterBasket (this, list);
-        recyclerViewBasket.setLayoutManager ( layoutManager );
-        recyclerViewBasket.setHasFixedSize ( true );
-        recyclerViewBasket.setAdapter ( adapterBasket );
-
-
+        
 
     }
 
