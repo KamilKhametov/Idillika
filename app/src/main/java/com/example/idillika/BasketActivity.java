@@ -10,6 +10,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Html;
 
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,6 +24,8 @@ import java.util.List;
 
 public class BasketActivity extends AppCompatActivity {
 
+    Button btnGoFromBasket;
+
     @Override
     protected void onCreate( Bundle savedInstanceState ) {
         super.onCreate ( savedInstanceState );
@@ -29,7 +33,9 @@ public class BasketActivity extends AppCompatActivity {
 
         // Закрепление actionBar
         actionBarAttach ();
-        
+        init ();
+        btnOnClickFromBasket ();
+
 
     }
 
@@ -41,6 +47,22 @@ public class BasketActivity extends AppCompatActivity {
         // Позволяет возвращаться на прошлый активити
         getSupportActionBar ().setDisplayHomeAsUpEnabled ( true );
     }
+
+    public void init(){
+        btnGoFromBasket = findViewById ( R.id.btnGoFromBasket );
+    }
+
+
+    public void btnOnClickFromBasket(){
+        btnGoFromBasket.setOnClickListener ( new View.OnClickListener () {
+            @Override
+            public void onClick( View v ) {
+                Intent intent = new Intent ( BasketActivity.this, CatalogActivity.class );
+                startActivity ( intent );
+            }
+        } );
+    }
+
 
 
 }
